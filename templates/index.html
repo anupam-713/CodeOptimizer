@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Code Optimizer</title>
+    <link rel="shortcut icon" href="/static/logo.png" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/static/index.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/vqx0mtu.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="" style="color:white;">
+                    <img src="/static/logo-removebg-preview.jpg" alt="" width="150" height="96"
+                        class="d-inline-block align-text-center" />
+                    Code Optimizer
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="center">
+            <h1>Remove Comments and Blank Lines from your Code.</h1>
+        </div>
+        <form action="/" method="get">
+            <div id="selectors" class="heading mt-5">
+                <div class="heading mb-4">
+                    Select Language of your Code :
+                </div>
+                <select class="form-select " aria-label="Default select example" name="Language">
+                    <!-- <option selected>Open this select menu</option> -->
+                    <option value="1">Python (#)</option>
+                    {%if language == "2" %}
+                        <option value="2" selected >C++/C/JAVA/JAVASCRIPT (//)</option>
+                    {%else%}
+                    <option value="2">C++/C/JAVA/JAVASCRIPT (//)</option>
+                    {%endif%}
+                </select>
+            </div>
+            <div id="parent">
+                <div id="code">
+                    <div class="mb-3">
+                        <label for="code_text" class="form-label">
+                            <div class="heading  mb-3 mt-2">
+                                Code to be Optimized :
+                            </div>
+                        </label>
+                        <textarea id="code_text" class="form-control" rows="3" name="text"
+                            class="shadow p-3 mb-5 bg-body rounded">{{Code}}</textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-2">Optimize Code</button>
+                </div>
+        </form>
+        <div id="converted_code">
+            <div class="mb-3">
+                <label for="converted_code_text" class="form-label">
+                    <div class="heading  mb-3">
+                       
+                        Optimized Code :
+                    </div>
+                </label>
+                <textarea id="converted_code_text" class="form-control" rows="3"
+                   >{{Converted_code}}</textarea>
+            </div>
+            <!-- <div class="shadow p-3 mb-5 bg-body rounded">
+                </div> -->
+        </div>
+    </div>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
