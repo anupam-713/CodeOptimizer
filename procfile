@@ -1,1 +1,1 @@
-web: gunicorn codeoptimizer.wsgi --log-file -
+web: gunicorn codeoptimizer.wsgi
