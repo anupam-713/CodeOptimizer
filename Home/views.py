@@ -19,7 +19,6 @@ def home(request):
             transformed_text += i
     params = {"Converted_code": transformed_text, "Code": Text, "language" : language}
     return render(request, "index.html", params)
-    # return HttpResponse("This is the  homepage ")
 
 
 
